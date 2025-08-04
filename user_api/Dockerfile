@@ -8,7 +8,8 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copia el código fuente de la app
+# Copia el archivo .env y código fuente de la app
+COPY .env .env
 COPY ./app ./app
 
 # Exponemos el puerto que usará uvicorn

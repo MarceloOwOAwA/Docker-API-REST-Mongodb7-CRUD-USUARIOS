@@ -1,6 +1,13 @@
 from fastapi import FastAPI
 from app.routes import auth  # Ruta de registro
 from app.routes import login  # Ruta de login con MongoDB
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+SECRET_KEY = os.getenv("SECRET_KEY")
+if not SECRET_KEY:
+    raise ValueError("SECRET_KEY no está definido en el archivo .env")
 
 app = FastAPI()
 
