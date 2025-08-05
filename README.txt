@@ -1,8 +1,6 @@
 Este proyecto implementa una API RESTful desarrollada con FastAPI y MongoDB para gestionar usuarios de manera segura, eficiente y modular.
 Permite crear usuarios, autenticarlos mediante tokens JWT, y almacenar los datos de manera persistente utilizando una base de datos NoSQL.
 
-Este proyecto consta con una aplicacion python ubicada en PostulacionMarceloOrdenes\AppRegistro\AppRegistro.exe para registrar usuarios
- 
 Tecnologías utilizadas
 
   FastAPI – Framework moderno y rápido para la construcción de APIs con Python.
