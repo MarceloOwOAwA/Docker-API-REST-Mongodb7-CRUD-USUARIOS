@@ -1,0 +1,35 @@
+Instalar Docker desde pagina web
+		https://www.docker.com/products/docker-desktop/
+---------------------------------------------------------------------------------
+
+Crear archivo .env con la siguiente estructura
+
+SECRET_KEY=               # Contraseña, se escribe sin comillas
+ALGORITHM=HS256           #Algoritmo de firma de tokens 
+ACCESS_TOKEN_EXPIRE_MINUTES=15          #minutos que persiste el token
+---------------------------------------------------------------------------------
+Ejecutar aplicacion con script
+	Abrir Powershell
+	Dirigirse a la carpeta raiz del proyecto y Dar permiso al archivo para ejecutar
+		Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+	Correr el script con el comando
+		.\iniciar_entorno.ps1
+---------------------------------------------------------------------------------
+Ejecutar aplicacion de forma manual
+	Abrir Powershell
+
+	Dirigirse a la carpeta 
+		Docker,Api,MongoDB
+
+	Ejecutar entorno virtual 
+		python -m venv venv
+
+		.\venv\Scripts\Activate.ps1
+	Dirigirse a la carpeta 
+		user_api
+	Ejecutar comando powershell
+		docker compose up --build
+	Dirigirse a pagina
+		http://localhost:8000/docs 
+	Correr aplicacion python ubicada en 
+		PostulacionMarceloOrdenes\AppRegistro
